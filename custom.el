@@ -3,7 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(LaTeX-mode-hook (quote (LaTeX-preview-setup LaTeX-math-mode turn-on-reftex)) t)
+ '(LaTeX-mode-hook (quote (LaTeX-preview-setup LaTeX-math-mode turn-on-reftex)))
  '(TeX-PDF-mode t)
  '(TeX-auto-save t)
  '(TeX-engine (quote xetex))
@@ -22,6 +22,8 @@
  '(j-path "/home/krzys/progs/j801/bin")
  '(make-backup-files t)
  '(mouse-autoselect-window t)
+ '(org-agenda-files (quote ("~/Dropbox/todo/")))
+ '(org-directory "~/Dropbox/todo/")
  '(reftex-plug-into-AUCTeX t)
  '(scss-compile-at-save nil t)
  '(sentence-end-double-space nil)
