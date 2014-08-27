@@ -1,7 +1,5 @@
 (require-package 'android-mode)
-(require-package 'fuel)
 (require-package 'auctex)
-(require-package 'reftex)
 
 (setq slime-path (file-name-directory (locate-library "slime")))
 (setq slime-backend (expand-file-name "swank-loader.lisp" slime-path))

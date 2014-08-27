@@ -1,12 +1,12 @@
 (when (< emacs-major-version 24)
   (require-package 'color-theme))
 
-(require-package 'color-theme-solarized)
+(require-package 'color-theme-sanityinc-solarized)
 
 ;;------------------------------------------------------------------------------
 ;; Old-style color theming support (via color-theme.el)
 ;;------------------------------------------------------------------------------
-(defcustom window-system-color-theme 'color-theme-solarized-dark
+(defcustom window-system-color-theme 'color-theme-sanityc-solarized-light
   "Color theme to use in window-system frames.
 If Emacs' native theme support is available, this setting is
 ignored: use `custom-enabled-themes' instead."
@@ -21,7 +21,7 @@ ignored: use `custom-enabled-themes' instead."
 (unless (boundp 'custom-enabled-themes)
   (defun color-theme-terminal ()
     (interactive)
-    (color-theme-solarized-dark))
+    (color-theme-sanityinc-solarized-light))
 
   (defun apply-best-color-theme-for-frame-type (frame)
     (with-selected-frame frame
@@ -63,12 +63,12 @@ ignored: use `custom-enabled-themes' instead."
 (defun light ()
   "Activate a light color theme."
   (interactive)
-  (color-theme-solarized-light))
+  (color-theme-sanityinc-solarized-light))
 
 (defun dark ()
   "Activate a dark color theme."
   (interactive)
-  (color-theme-solarized-dark))
+  (color-theme-sanityinc-solarized-dark))
 
 
 (provide 'init-themes)
