@@ -13,5 +13,6 @@
 
 (ac-flyspell-workaround)
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+(add-hook 'text-mode-hook 'flyspell-mode)
 
 (provide 'init-local)
