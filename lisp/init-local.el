@@ -1,6 +1,8 @@
 (require-package 'j-mode)
 (require-package 'android-mode)
 (require-package 'fuel)
+(require-package 'idris-mode)
+
 (require-package 'auctex)
 (require-package 'reftex)
 (require-package 'auto-complete-auctex)
