@@ -2,6 +2,7 @@
 /.emacs.desktop
 /auto-save-list
 /.session
+/custom.el
 *.elc
 CVS
 .svn
@@ -32,3 +33,5 @@ site-lisp/package/
 /.smex-items
 /image-dired/
 /eshell
+/.cask/
+/.sx/
