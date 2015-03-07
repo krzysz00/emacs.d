@@ -14,7 +14,7 @@
  '(c-basic-offset 4)
  '(canlock-password "373e129cafb77ade03ef1a7c57a3321b8966c25b")
  '(custom-enabled-themes (quote (solarized-light)))
- '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default)))
+ '(custom-safe-themes (quote ("31a01668c84d03862a970c471edbd377b2430868eccf5e8a9aec6831f1a0908d" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default)))
  '(flyspell-use-meta-tab nil)
  '(focus-follows-mouse t)
  '(font-lock-maximum-decoration t)
@@ -28,7 +28,8 @@
  '(scss-compile-at-save nil t)
  '(sentence-end-double-space nil)
  '(session-use-package t nil (session))
- '(tab-width 4))
+ '(tab-width 4)
+ '(verilog-auto-lineup (quote ignore)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
