@@ -5,8 +5,6 @@
 
 (require-package 'auctex)
 (require-package 'reftex)
-(require-package 'auto-complete-auctex)
-(require 'auto-complete-auctex)
 
 (setq slime-path (file-name-directory (locate-library "slime")))
 (setq slime-backend (expand-file-name "swank-loader.lisp" slime-path))
