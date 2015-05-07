@@ -6,7 +6,7 @@
 ;;------------------------------------------------------------------------------
 ;; Old-style color theming support (via color-theme.el)
 ;;------------------------------------------------------------------------------
-(defcustom window-system-color-theme 'color-theme-solarized-dark
+(defcustom window-system-color-theme 'color-theme-solarized
   "Color theme to use in window-system frames.
 If Emacs' native theme support is available, this setting is
 ignored: use `custom-enabled-themes' instead."
@@ -21,7 +21,7 @@ ignored: use `custom-enabled-themes' instead."
 (unless (boundp 'custom-enabled-themes)
   (defun color-theme-terminal ()
     (interactive)
-    (color-theme-solarized-dark))
+    (color-theme-solarized))
 
   (defun apply-best-color-theme-for-frame-type (frame)
     (with-selected-frame frame
@@ -44,7 +44,8 @@ ignored: use `custom-enabled-themes' instead."
 ;;------------------------------------------------------------------------------
 
 ;; If you don't customize it, this is the theme you get.
-(setq-default custom-enabled-themes '(solarized-light))
+(setq-default custom-enabled-themes '(solarized))
+(setq-default frame-background-mode 'light)
 
 ;; Ensure that themes will be applied even if they have not been customized
 (defun reapply-themes ()
