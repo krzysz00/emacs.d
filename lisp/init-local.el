@@ -15,4 +15,5 @@
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
 (add-hook 'text-mode-hook 'flyspell-mode)
 
+(load "l.el") ;; TODO: Temp mode for Dr. Dillig's class
 (provide 'init-local)
