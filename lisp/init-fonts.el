@@ -30,5 +30,9 @@ This is helpful for writeroom-mode, in particular."
           'sanityinc/maybe-adjust-visual-fill-column)
 
 
-
+(when (eq system-type 'gnu/linux)
+  (set-fontset-font "fontset-default"
+                    (cons (decode-char 'ucs #x0370)
+                          (decode-char 'ucs #x03ff))
+                    "Ubuntu Mono"))
 (provide 'init-fonts)

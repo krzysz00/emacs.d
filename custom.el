@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(LaTeX-mode-hook
    (quote
-    (LaTeX-preview-setup LaTeX-math-mode turn-on-reftex)) t)
+    (LaTeX-preview-setup LaTeX-math-mode turn-on-reftex)))
  '(TeX-PDF-mode t)
  '(TeX-auto-save t)
  '(TeX-engine (quote xetex))
@@ -21,9 +21,11 @@
  '(android-mode-sdk-dir "/home/krzys/progs/android/android")
  '(c-basic-offset 4)
  '(canlock-password "373e129cafb77ade03ef1a7c57a3321b8966c25b")
+ '(custom-enabled-themes (quote (solarized)))
  '(custom-safe-themes
    (quote
     ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
+ '(flyspell-issue-message-flag nil)
  '(flyspell-use-meta-tab nil)
  '(focus-follows-mouse t)
  '(font-lock-maximum-decoration t)
