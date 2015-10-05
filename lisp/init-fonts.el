@@ -34,5 +34,9 @@ This is helpful for writeroom-mode, in particular."
   (set-fontset-font "fontset-default"
                     (cons (decode-char 'ucs #x0370)
                           (decode-char 'ucs #x03ff))
-                    "Ubuntu Mono"))
+                    "Ubuntu Mono")
+  (set-fontset-font "fontset-default"
+                    (cons (decode-char 'ucs #x1d400)
+                          (decode-char 'ucs #x1d7ff))
+                    "Symbola"))
 (provide 'init-fonts)

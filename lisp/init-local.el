@@ -16,4 +16,10 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 
 (load "l.el") ;; TODO: Temp mode for Dr. Dillig's class
+
+(when (executable-find "agda-mode")
+  (load-file (let ((coding-system-for-read 'utf-8))
+               (shell-command-to-string "agda-mode locate")))
+  (add-to-list 'agda2-include-dirs "/home/krzys/prog-local/agda-stdlib/")
+  (add-to-list 'agda2-include-dirs "."))
 (provide 'init-local)
