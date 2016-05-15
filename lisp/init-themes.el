@@ -1,8 +1,7 @@
-(require-package 'color-theme-solarized)
+(require-package 'solarized-theme)
 
 ;; If you don't customize it, this is the theme you get.
-(setq-default custom-enabled-themes '(solarized))
-(setq-default frame-background-mode 'light)
+(setq-default custom-enabled-themes '(solarized-light))
 
 ;; Ensure that themes will be applied even if they have not been customized
 (defun reapply-themes ()
@@ -21,12 +20,12 @@
 (defun light ()
   "Activate a light color theme."
   (interactive)
-  (color-theme-solarized-light))
+  (load-theme 'solarized-light))
 
 (defun dark ()
   "Activate a dark color theme."
   (interactive)
-  (color-theme-solarized-dark))
+  (load-theme 'solarized-dark))
 
 
 (provide 'init-themes)
