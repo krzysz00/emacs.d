@@ -56,7 +56,7 @@
 
 
 (when (maybe-require-package 'indent-guide)
-  (add-hook 'prog-mode-hook 'indent-guide-mode)
+  ;;(add-hook 'prog-mode-hook 'indent-guide-mode)
   (after-load 'indent-guide
     (diminish 'indent-guide-mode)))
 
