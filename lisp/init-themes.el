@@ -1,4 +1,7 @@
 (require-package 'solarized-theme)
+(setq-default solarized-high-contrast-mode-line t
+              solarized-scale-org-headlines nil
+              solarized-use-less-bold t)
 
 ;; If you don't customize it, this is the theme you get.
 (setq-default custom-enabled-themes '(solarized-light))
