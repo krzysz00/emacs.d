@@ -23,12 +23,14 @@
 (defun light ()
   "Activate a light color theme."
   (interactive)
-  (load-theme 'solarized-light))
+  (setq custom-enabled-themes '(solarized-light))
+  (reapply-themes))
 
 (defun dark ()
   "Activate a dark color theme."
   (interactive)
-  (load-theme 'solarized-dark))
+  (setq custom-enabled-themes '(solarized-dark))
+  (reapply-themes))
 
 
 (provide 'init-themes)
