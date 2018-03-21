@@ -108,7 +108,7 @@
 (require 'init-yaml)
 (require 'init-docker)
 (require 'init-terraform)
-(require 'init-nix)
+;;(require 'init-nix)
 (maybe-require-package 'nginx-mode)
 
 (require 'init-paredit)
@@ -137,8 +137,14 @@
 (require-package 'dsvn)
 (when *is-a-mac*
   (require-package 'osx-location))
-(maybe-require-package 'regex-tool)
+(unless (eq system-type 'windows-nt)
+  (maybe-require-package 'daemons))
 (maybe-require-package 'dotenv-mode)
+
+(when (maybe-require-package 'uptimes)
+  (setq-default uptimes-keep-count 200)
+  (add-hook 'after-init-hook (lambda () (require 'uptimes))))
+
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
@@ -155,19 +161,16 @@
 
 
 ;;----------------------------------------------------------------------------
-;; Allow users to provide an optional "init-local" containing personal settings
-;;----------------------------------------------------------------------------
-(require 'init-local nil t)
-
-
-;;----------------------------------------------------------------------------
 ;; Locales (setting them earlier in this file doesn't work in X)
 ;;----------------------------------------------------------------------------
 (require 'init-locales)
 
 
-(when (maybe-require-package 'uptimes)
-  (add-hook 'after-init-hook (lambda () (require 'uptimes))))
+;;----------------------------------------------------------------------------
+;; Allow users to provide an optional "init-local" containing personal settings
+;;----------------------------------------------------------------------------
+(require 'init-local nil t)
+
 
 
 (provide 'init)
