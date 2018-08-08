@@ -19,6 +19,7 @@
      (output-pdf "Evince")
      (output-html "xdg-open"))))
  '(android-mode-sdk-dir "/home/krzys/progs/android/android")
+ '(auth-sources (quote ("~/.authinfo.gpg" "~/.authinfo" "~/.netrc")))
  '(c-basic-offset 4)
  '(canlock-password "373e129cafb77ade03ef1a7c57a3321b8966c25b")
  '(custom-enabled-themes (quote (solarized-light)))
@@ -38,6 +39,9 @@
  '(mouse-autoselect-window t)
  '(org-agenda-files (quote ("~/Dropbox/todo/")))
  '(org-directory "~/Dropbox/todo/")
+ '(package-selected-packages
+   (quote
+    (yari yard-mode yagist writeroom-mode whole-line-or-region whitespace-cleanup-mode wgrep vlf vc-darcs uptimes unfill undo-tree typescript-mode toml-mode textile-mode tagedit symbol-overlay switch-window sql-indent solarized-theme smex smarty-mode slime-company skewer-less session scss-mode scratch sass-mode ruby-hash-syntax ruby-compilation rspec-mode robe restclient regex-tool rainbow-mode rainbow-delimiters racer purescript-mode psc-ide projectile-rails prettier-js pip-requirements paredit-everywhere page-break-lines origami org-pomodoro org-fstree org-cliplink nlinum nix-sandbox nix-mode nix-buffer nginx-mode multiple-cursors move-dup mode-line-bell mmm-mode magithub magit-gh-pulls lua-mode list-unicode-display less-css-mode ledger-mode js-comint j-mode ivy-xref ivy-historian ipretty intero immortal-scratch idris-mode ibuffer-vc httprepl htmlize hippie-expand-slime hindent highlight-quoted highlight-escape-sequences guide-key goto-gem go-mode gnuplot gitignore-mode github-issues github-clone gitconfig-mode git-timemachine git-messenger git-blamed fullframe fuel flycheck-rust flycheck-package flycheck-ledger flycheck-elm flycheck-color-mode-line flycheck-clojure expand-region exec-path-from-shell erlang elm-mode elisp-slime-nav elein dynamic-spaces dsvn dotenv-mode dockerfile-mode docker-compose-mode docker disable-mouse diredfl dimmer diminish diff-hl dhall-mode default-text-scale darcsum daemons csv-mode css-eldoc counsel company-terraform company-quickhelp company-php company-nixos-options company-auctex company-anaconda command-log-mode coffee-mode cmd-to-echo cljsbuild-mode cl-lib-highlight cask-mode bundler bug-reference-github browse-kill-ring browse-at-remote beacon avy auto-compile anzu android-mode aggressive-indent add-node-modules-path)))
  '(python-shell-interpreter "python3")
  '(reftex-plug-into-AUCTeX t)
  '(scss-compile-at-save nil t)
