@@ -3,8 +3,10 @@
   (add-hook 'text-mode-hook 'projectile-mode)
   (add-hook 'prog-mode-hook 'projectile-mode)
 
-  ;; Shorter modeline
   (after-load 'projectile
+    (define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map)
+
+    ;; Shorter modeline
     (setq-default
      projectile-mode-line
      '(:eval
