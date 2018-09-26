@@ -22,11 +22,78 @@
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 
-(load "l.el") ;; TODO: Temp mode for Dr. Dillig's class
-
 (when (executable-find "agda-mode")
   (load-file (let ((coding-system-for-read 'utf-8))
                (shell-command-to-string "agda-mode locate"))))
 
 (menu-bar-mode 1)
+
+;;; Org-mode GTD
+
+(setq org-capture-templates '(("t" "TODO [Inbox]" entry (file "inbox.org")
+                               "* TODO %i%?" :clock-resume t)
+                              ("T" "Tickler" entry (file "tickler.org")
+                               "* %i%?\n %U" :clock-resume t)))
+
+(setq org-refile-use-outline-path 'file)
+
+(setq org-refile-targets '(("~/Dropbox/todo/gtd.org" . (:maxlevel . 3))
+                           ("~/Dropbox/todo/someday.org" . (:maxlevel . 2))
+                           ("~/Dropbox/todo/tickler.org" . (:maxlevel . 1))))
+
+(setq org-tag-alist '((:startgroup . nil)
+                      ("@work" . ?w)
+                      ("@home" . ?h)
+                      (:endgroup . nil)
+                      (:startgrouptag . nil)
+                      ("@computer" . ?c)
+                      (:grouptags . nil)
+                      ("@laptop" . ?l)
+                      ("@desktop" . ?d)
+                      (:endgrouptag . nil)
+                      ("@telephone" . ?t)
+                      ("reading" . ?R)
+                      ("writing" . ?W)
+                      ("coding" . ?C)))
+
+
+(setq org-agenda-custom-commands
+      `(("g" "GTD info"
+         ((agenda "" ((org-agenda-span 2)))
+          (tags-todo "INBOX"
+                     ((org-agenda-overriding-header "Inbox")))
+          (stuck ""
+                 ((org-agenda-overriding-header "Stuck projects")
+                  (org-agenda-tags-todo-honor-ignore-options t)
+                  (org-agenda-todo-ignore-scheduled 'future)))
+          (todo "WAITING"
+                ((org-agenda-overriding-header "Waiting")))
+          (todo "NEXT"
+                ((org-agenda-overriding-header "Next items")))
+          (todo "PROJECT"
+                ((org-agenda-overriding-header "Projects")))))
+        ("i" "Inbox" ((agenda "" nil)
+                      (tags-todo "INBOX"
+                                 ((org-agenda-overriding-header "Inbox")))))
+        ("n" . "Next items")
+        ("nn" "All"
+         ((agenda "" nil)
+          (todo "NEXT" ((org-agenda-overriding-header "Items")))))))
+
+(dolist (tag-char org-tag-alist)
+  (let ((tag (car tag-char)))
+    (when (and (stringp tag) (char-equal (aref tag 0) ?@))
+      (let ((keybind (string ?n (aref tag 1)))
+            (context-name (capitalize (substring tag 1)))
+            (search (concat tag "/NEXT")))
+        (add-to-list 'org-agenda-custom-commands
+                     `(,keybind
+                       ,context-name
+                       ((agenda "" nil)
+                        (tags-todo
+                         ,search
+                         ((org-agenda-overriding-header "Next items")))))
+                     t)))))
+
+
 (provide 'init-local)
