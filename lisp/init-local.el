@@ -1,7 +1,10 @@
 (require-package 'j-mode)
 (require-package 'android-mode)
 (require-package 'fuel)
-(require-package 'idris-mode)
+
+(require-package 'proof-general)
+(require-package 'company-coq)
+(add-hook 'coq-mode-hook #'company-coq-mode)
 
 (require-package 'auctex)
 (require-package 'reftex)
