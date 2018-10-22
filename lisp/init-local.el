@@ -99,4 +99,14 @@
                      t)))))
 
 
+(when (eq system-type 'gnu/linux)
+  (set-fontset-font "fontset-default"
+                    (cons (decode-char 'ucs #x0370)
+                          (decode-char 'ucs #x03ff))
+                    "Ubuntu Mono")
+  (set-fontset-font "fontset-default"
+                    (cons (decode-char 'ucs #x1d400)
+                          (decode-char 'ucs #x1d7ff))
+                    "Symbola"))
+
 (provide 'init-local)
