@@ -26,6 +26,7 @@
  '(custom-safe-themes
    (quote
     ("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" default)))
+ '(debug-on-error nil)
  '(flycheck-disabled-checkers (quote (c/c++-clang coq)))
  '(flycheck-python-pycompile-executable "python3")
  '(flycheck-python-pylint-executable "pylint3")
