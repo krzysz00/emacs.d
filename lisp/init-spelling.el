@@ -1,3 +1,7 @@
+;;; init-spelling.el --- Spell check settings -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
 (require 'ispell)
 
 (setq-default ispell-program-name "aspell")
@@ -11,3 +15,4 @@
     (add-to-list 'flyspell-prog-text-faces 'nxml-text-face)))
 
 (provide 'init-spelling)
+;;; init-spelling.el ends here

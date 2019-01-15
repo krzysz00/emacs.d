@@ -1,3 +1,6 @@
+;;; init-themes.el --- Defaults for themes -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 (require-package 'solarized-theme)
 (setq-default solarized-high-contrast-mode-line t
               solarized-scale-org-headlines nil
