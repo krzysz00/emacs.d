@@ -1,6 +1,7 @@
 (require-package 'j-mode)
 (require-package 'android-mode)
 (require-package 'fuel)
+(require-package 'racket-mode)
 
 (require-package 'proof-general)
 (require-package 'company-coq)
