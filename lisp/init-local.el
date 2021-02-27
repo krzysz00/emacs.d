@@ -1,4 +1,3 @@
-(require-package 'j-mode)
 (require-package 'android-mode)
 (require-package 'fuel)
 (require-package 'racket-mode)

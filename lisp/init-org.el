@@ -27,7 +27,7 @@
 
 (maybe-require-package 'org-cliplink)
 
-(define-key global-map (kbd "C-c l") 'org-store-link)
+;;(define-key global-map (kbd "C-c l") 'org-store-link)
 (define-key global-map (kbd "C-c a") 'org-agenda)
 
 (defvar sanityinc/org-global-prefix-map (make-sparse-keymap)
