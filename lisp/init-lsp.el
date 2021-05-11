@@ -5,7 +5,7 @@
 (require-package 'lsp-mode)
 (require-package 'ccls)
 (setq lsp-enable-snippet nil)
-(dolist (mode-to-hook '(c-mode c++-mode objc-mode cuda-mode))
+(dolist (mode-to-hook '(c-mode-hook c++-mode-hook objc-mode-hook cuda-mode-hook))
   (add-hook mode-to-hook (lambda () (require 'ccls) (lsp-deferred))))
 
 (provide 'init-lsp)
