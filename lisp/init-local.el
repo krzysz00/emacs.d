@@ -109,4 +109,5 @@
                           (decode-char 'ucs #x1d7ff))
                     "Symbola"))
 
+(add-hook 'c++-mode-hook (lambda () (c-set-offset 'innamespace [0])))
 (provide 'init-local)
