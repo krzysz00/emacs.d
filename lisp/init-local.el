@@ -110,4 +110,10 @@
                     "Symbola"))
 
 (add-hook 'c++-mode-hook (lambda () (c-set-offset 'innamespace [0])))
+
+;; 256-color eterm
+(when (maybe-require-package 'eterm-256color)
+  (require 'eterm-256color)
+  (add-hook 'term-mode-hook #'eterm-256color-mode))
+
 (provide 'init-local)
