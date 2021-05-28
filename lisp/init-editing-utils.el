@@ -90,7 +90,7 @@
 
 
 
-(when (fboundp 'display-line-numbers-mode)
+(when (and (fboundp 'display-line-numbers-mode) (not (fboundp 'emacspeak)))
   (setq-default display-line-numbers-width 3)
   (add-hook 'prog-mode-hook 'display-line-numbers-mode))
 
