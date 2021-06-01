@@ -116,11 +116,12 @@
   (require 'eterm-256color)
   (add-hook 'term-mode-hook #'eterm-256color-mode))
 
-(dolist (mode-to-dict
-         '(sh-mode
-           comint-mode dired-mode
-           eshell-mode term-mode))
-  (emacspeak-pronounce-add-dictionary-entry
-   mode-to-dict "sqid" "squid"))
+(with-eval-after-load 'empcspeak
+  (dolist (mode-to-dict
+           '(sh-mode
+             comint-mode dired-mode
+             eshell-mode term-mode))
+    (emacspeak-pronounce-add-dictionary-entry
+     mode-to-dict "sqid" "squid")))
 
 (provide 'init-local)
