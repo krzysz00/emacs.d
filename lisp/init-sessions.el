@@ -20,11 +20,12 @@
   (let ((start-time (current-time)))
     (prog1
         (apply orig ver filename args)
-      (message "Desktop: %.2fms to restore %s"
-               (sanityinc/time-subtract-millis (current-time)
-                                               start-time)
-               (when filename
-                 (abbreviate-file-name filename))))))
+      (ems-with-messages-silenced
+          (message "Desktop: %.2fms to restore %s"
+                   (sanityinc/time-subtract-millis (current-time)
+                                                   start-time)
+                   (when filename
+                     (abbreviate-file-name filename)))))))
 (advice-add 'desktop-create-buffer :around 'sanityinc/desktop-time-buffer-create)
 
 

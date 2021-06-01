@@ -41,10 +41,10 @@
 (require 'init-elpa)      ;; Machinery for installing required packages
 (require 'init-exec-path) ;; Set up $PATH
 
-(let ((file (expand-file-name "emacspeak-54.0/lisp/emacspeak-setup.el" user-emacs-directory)))
+(let ((file (expand-file-name "emacspeak/lisp/emacspeak-setup.el" user-emacs-directory)))
   (when (file-exists-p file)
     (load-file file)
-    (dtk-set-rate 250 t)))
+    (dtk-set-rate 400 t)))
 
 ;; Allow users to provide an optional "init-preload-local.el"
 (require 'init-preload-local nil t)
