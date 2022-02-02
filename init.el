@@ -45,7 +45,8 @@
   (when (file-exists-p file)
     (load-file file)
     (dtk-set-language "en-us")
-    (dtk-set-rate 420 t)))
+    (dtk-set-rate 420 t)
+    (emacspeak-toggle-word-echo t)))
 
 ;; Allow users to provide an optional "init-preload-local.el"
 (require 'init-preload-local nil t)
