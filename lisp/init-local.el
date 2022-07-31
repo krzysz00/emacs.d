@@ -3,25 +3,14 @@
 (require-package 'racket-mode)
 
 (require-package 'proof-general)
-(require-package 'company-coq)
-(add-hook 'coq-mode-hook #'company-coq-mode)
 
 (require-package 'auctex)
 (require-package 'reftex)
-(require-package 'company-auctex)
 
 (setq slime-path (file-name-directory (locate-library "slime")))
 (setq slime-backend (expand-file-name "swank-loader.lisp" slime-path))
 (setq slime-lisp-implementations
       '((sbcl ("sbcl" "--core" "/home/krzys/prog-local/sbcl.core-for-slime")) (clisp ("/usr/bin/clisp"))))
-
-(after-load 'company
-  (define-key company-mode-map (kbd "M-TAB") 'company-complete)
-  (define-key company-active-map (kbd "M-TAB") 'company-select-next)
-  (add-hook 'TeX-mode-hook
-            (lambda ()
-              (make-local-variable 'company-backends)
-              (company-auctex-init))))
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 
