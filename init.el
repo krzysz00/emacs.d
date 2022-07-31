@@ -44,8 +44,8 @@
 (let ((file (expand-file-name "emacspeak/lisp/emacspeak-setup.el" user-emacs-directory)))
   (when (file-exists-p file)
     (load-file file)
-    (dtk-set-language "en-us:victor")
     (dtk-set-rate 420 t)
+    (dtk-set-language "en-us:victor")
     (emacspeak-toggle-word-echo t)))
 
 ;; Allow users to provide an optional "init-preload-local.el"
