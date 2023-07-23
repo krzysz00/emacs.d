@@ -3,7 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(LaTeX-mode-hook '(LaTeX-preview-setup LaTeX-math-mode turn-on-reftex) t)
+ '(LaTeX-mode-hook '(LaTeX-preview-setup LaTeX-math-mode turn-on-reftex))
  '(TeX-PDF-mode t)
  '(TeX-auto-save t)
  '(TeX-engine 'xetex)
@@ -42,8 +42,6 @@
  '(org-directory "~/Dropbox/todo/")
  '(org-hide-emphasis-markers nil t)
  '(org-log-done nil t)
- '(package-selected-packages
-   '(eterm-256color company-auctex reftex auctex company-coq proof-general racket-mode fuel android-mode envrc uptimes shfmt dotenv-mode htmlize lua-mode gnuplot sudo-edit flycheck-ledger ledger-mode origami regex-tool info-colors flycheck-clojure cider elein cljsbuild-mode clojure-mode slime-company slime cask-mode flycheck-relint cl-libify package-lint-flymake highlight-quoted macrostep aggressive-indent immortal-scratch auto-compile ipretty elisp-slime-nav paredit nginx-mode sbt-mode scala-mode company-terraform terraform-mode docker-compose-mode dockerfile-mode docker yaml-mode flycheck-rust rust-mode flycheck-nim nim-mode j-mode flycheck-ocaml dune-format dune tuareg sqlformat projectile-rails yard-mode bundler yari robe ruby-compilation inf-ruby rspec-mode ruby-hash-syntax psci psc-ide purescript-mode elm-test-runner elm-mode dhall-mode haskell-mode reformatter toml-mode pip-requirements restclient httprepl haml-mode css-eldoc skewer-less sass-mode rainbow-mode tagedit org-pomodoro writeroom-mode org-cliplink company-php smarty-mode php-mode add-node-modules-path skewer-mode js-comint coffee-mode xref-js2 prettier-js typescript-mode js2-mode json-mode erlang csv-mode markdown-mode textile-mode crontab-mode alert ccls lsp-mode ibuffer-projectile github-review forge github-clone bug-reference-github yagist git-commit magit-todos magit git-link git-timemachine git-modes git-blamed vc-darcs whitespace-cleanup-mode which-key highlight-escape-sequences whole-line-or-region move-dup page-break-lines multiple-cursors avy browse-kill-ring symbol-overlay rainbow-delimiters beacon mode-line-bell vlf list-unicode-display unfill mmm-mode session windswap switch-window company-quickhelp company marginalia consult-flycheck embark-consult projectile consult embark orderless vertico consult-eglot eglot flymake-flycheck flymake ibuffer-vc wgrep-ag ag wgrep anzu diff-hl diredfl disable-mouse default-text-scale dimmer solarized-theme command-log-mode scratch diminish exec-path-from-shell gnu-elpa-keyring-update fullframe seq racer browse-at-remote flycheck-package merlin-eldoc merlin-company merlin flycheck-elm dante company-anaconda anaconda-mode flycheck-color-mode-line flycheck gitconfig-mode gitignore-mode cl-lib-highlight icomplete-vertical daemons ensime selectrum-prescient goto-line-preview dsvn hippie-expand-slime goto-gem cmd-to-echo darcsum expand-region ivy-xref swiper counsel ivy smex paredit-everywhere guide-key sqlup-mode hindent intero magithub ruby-mode git-messenger nlinum ivy-historian cl-lib idris-mode less-css-mode sql-indent scss-mode org-fstree nix-sandbox nix-buffer magit-gh-pulls go-mode github-issues dynamic-spaces company-nixos-options))
  '(python-shell-interpreter "python3" t)
  '(reftex-plug-into-AUCTeX t)
  '(scss-compile-at-save nil t)

@@ -37,7 +37,5 @@
     :args ocp-indent-args
     :lighter " OCP"))
 
-(when (maybe-require-package 'flycheck-ocaml)
-  (flycheck-ocaml-setup))
 (provide 'init-ocaml)
 ;;; init-ocaml.el ends here
