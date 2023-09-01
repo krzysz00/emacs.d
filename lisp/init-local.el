@@ -105,7 +105,7 @@
   (require 'eterm-256color)
   (add-hook 'term-mode-hook #'eterm-256color-mode))
 
-(with-eval-after-load 'empcspeak
+(with-eval-after-load 'emacspeak
   (dolist (mode-to-dict
            '(sh-mode
              comint-mode dired-mode
