@@ -43,6 +43,7 @@
 
 (let ((file (expand-file-name "emacspeak/lisp/emacspeak-setup.el" user-emacs-directory)))
   (when (file-exists-p file)
+    (customize-set-variable 'tts-notification-device "")
     (load-file file)
     (dtk-set-rate 420 t)
     (dtk-set-language "en-us:victor")
