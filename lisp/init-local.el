@@ -7,10 +7,12 @@
 (require-package 'auctex)
 (require-package 'reftex)
 
-(setq slime-path (file-name-directory (locate-library "slime")))
-(setq slime-backend (expand-file-name "swank-loader.lisp" slime-path))
-(setq slime-lisp-implementations
-      '((sbcl ("sbcl" "--core" "/home/krzys/prog-local/sbcl.core-for-slime")) (clisp ("/usr/bin/clisp"))))
+(with-eval-after-load 'slime
+  (when (file-exists-p "/home/krzys/prog-local/sbcl.core-for-slime")
+    (setq slime-lisp-implementations
+          '((sbcl ("sbcl" "--core" "/home/krzys/prog-local/sbcl.core-for-slime") :coding-system utf-8-unix)
+            (clisp ("/usr/bin/clisp") :coding-system utf-8-unix)))))
+(require-package 'slime)
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 
