@@ -56,4 +56,6 @@ site-lisp/package/
 /smex-items
 /eln-cache/
 /projects
+/forge-*.sqlite
+/projectile.cache
 /emacspeak
