@@ -90,7 +90,7 @@
                      t)))))
 
 
-(when (eq system-type 'gnu/linux)
+(when (and (eq system-type 'gnu/linux) (fboundp 'set-fontset-font))
   (set-fontset-font "fontset-default"
                     (cons (decode-char 'ucs #x0370)
                           (decode-char 'ucs #x03ff))
