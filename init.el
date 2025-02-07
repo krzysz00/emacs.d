@@ -48,7 +48,7 @@
     (load-file file)
     (with-eval-after-load 'emacspeak-setup
       (dtk-set-rate 420 t)
-      (dtk-set-language ":victor")
+      (dtk-set-language "en-us:victor")
       (emacspeak-toggle-word-echo t))))
 
 ;; General performance tuning
@@ -202,6 +202,9 @@
 
 ;; Allow users to provide an optional "init-local" containing personal settings
 (require 'init-local nil t)
+
+(if (fboundp 'dtk-set-language)
+    (dtk-set-language "en-us:victor"))
 
 (provide 'init)
 
