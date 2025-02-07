@@ -46,9 +46,10 @@
   (when (file-exists-p file)
     (customize-set-variable 'tts-notification-device "")
     (load-file file)
-    (dtk-set-rate 420 t)
-    (dtk-set-language "en-us:victor")
-    (emacspeak-toggle-word-echo t)))
+    (with-eval-after-load 'emacspeak-setup
+      (dtk-set-rate 420 t)
+      (dtk-set-language ":victor")
+      (emacspeak-toggle-word-echo t))))
 
 ;; General performance tuning
 (when (require-package 'gcmh)
