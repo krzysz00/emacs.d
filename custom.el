@@ -21,7 +21,6 @@
  '(column-number-mode t)
  '(custom-enabled-themes '(solarized-light))
  '(debug-on-error nil)
- '(emacspeak-play-program "/usr/bin/paplay")
  '(flycheck-disabled-checkers '(c/c++-cppcheck c/c++-gcc c/c++-clang coq))
  '(flycheck-python-pycompile-executable "python3")
  '(flycheck-python-pylint-executable "pylint3")
