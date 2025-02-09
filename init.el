@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+;;; Two comments is I don't like it, one is I don't program that
+
 ;; Produce backtraces when errors occur: can be helpful to diagnose startup issues
 ;;(setq debug-on-error t)
 
@@ -40,7 +42,7 @@
 (require 'init-site-lisp) ;; Must come before elpa, as it may provide package.el
 ;; Calls (package-initialize)
 (require 'init-elpa)      ;; Machinery for installing required packages
-(require 'init-exec-path) ;; Set up $PATH
+;;(require 'init-exec-path) ;; Set up $PATH
 
 (let ((file (expand-file-name "emacspeak/lisp/emacspeak-setup.el" user-emacs-directory)))
   (when (file-exists-p file)
@@ -49,7 +51,8 @@
     (with-eval-after-load 'emacspeak-setup
       (dtk-set-rate 550 t)
       (dtk-set-language "en-us:victor")
-      (emacspeak-toggle-word-echo t))))
+      (emacspeak-toggle-word-echo t)
+      (add-hook 'after-init-hook (lambda () (dtk-set-language "en-us:victor"))))))
 
 ;; General performance tuning
 (when (require-package 'gcmh)
@@ -128,21 +131,20 @@
 (require 'init-toml)
 (require 'init-yaml)
 (require 'init-docker)
-(require 'init-terraform)
-(require 'init-scala)
+;(require 'init-terraform)
 (require 'init-ocaml)
-;;(require 'init-nix)
-(maybe-require-package 'nginx-mode)
-(maybe-require-package 'just-mode)
-(when (maybe-require-package 'just-ts-mode)
+;(require 'init-nix)
+;(maybe-require-package 'nginx-mode)
+;(maybe-require-package 'just-mode)
+;(when (maybe-require-package 'just-ts-mode)
   ;; Undo overly-optimistic autoloading, so that things still work in
   ;; Emacs 29 without treesitter
-  (sanityinc/remove-auto-mode  'just-ts-mode))
-(maybe-require-package 'justl)
+;  (sanityinc/remove-auto-mode  'just-ts-mode))
+;(maybe-require-package 'justl)
 
-(require 'init-paredit)
+;;(require 'init-paredit)
 (require 'init-lisp)
-(require 'init-sly)
+;;(require 'init-sly)
 (require 'init-clojure)
 (require 'init-clojure-cider)
 
@@ -202,9 +204,6 @@
 
 ;; Allow users to provide an optional "init-local" containing personal settings
 (require 'init-local nil t)
-
-(if (fboundp 'dtk-set-language)
-    (dtk-set-language "en-us:victor"))
 
 (provide 'init)
 

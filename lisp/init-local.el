@@ -4,6 +4,8 @@
 
 (require-package 'proof-general)
 
+(require-package 'git-gutter)
+
 (require-package 'auctex)
 (require-package 'reftex)
 
@@ -19,8 +21,6 @@
 (when (executable-find "agda-mode")
   (load-file (let ((coding-system-for-read 'utf-8))
                (shell-command-to-string "agda-mode locate"))))
-
-(menu-bar-mode 1)
 
 ;;; Org-mode GTD
 
