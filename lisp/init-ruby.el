@@ -67,10 +67,7 @@
 
 
 
-;; Dosen't seem to be available for emacs 30
-(maybe-require-package 'bundler)
 
-
 (when (maybe-require-package 'yard-mode)
   (add-hook 'ruby-mode-hook 'yard-mode)
   (with-eval-after-load 'yard-mode
