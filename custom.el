@@ -3,7 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(LaTeX-mode-hook '(LaTeX-preview-setup LaTeX-math-mode turn-on-reftex))
+ '(LaTeX-mode-hook '(LaTeX-preview-setup LaTeX-math-mode turn-on-reftex) t)
  '(TeX-PDF-mode t)
  '(TeX-auto-save t)
  '(TeX-engine 'xetex)
@@ -16,7 +16,7 @@
  '(auth-sources '("~/.authinfo.gpg" "~/.authinfo" "~/.netrc"))
  '(canlock-password "373e129cafb77ade03ef1a7c57a3321b8966c25b")
  '(column-number-mode t)
- '(custom-enabled-themes '(solarized-light))
+ '(custom-enabled-themes '(modus-vivendi))
  '(debug-on-error nil)
  '(flycheck-disabled-checkers '(c/c++-cppcheck c/c++-gcc c/c++-clang coq))
  '(flycheck-python-pycompile-executable "python3")
@@ -34,8 +34,8 @@
      "~/Dropbox/todo/tickler.org"))
  '(org-default-notes-file "~/Dropbox/todo/notes.org")
  '(org-directory "~/Dropbox/todo/")
- '(org-hide-emphasis-markers nil)
- '(org-log-done nil)
+ '(org-hide-emphasis-markers nil t)
+ '(org-log-done nil t)
  '(package-selected-packages
    '(add-node-modules-path ag aggressive-indent alert android-mode anzu
                            auctex auto-compile avy browse-kill-ring
@@ -65,9 +65,9 @@
                            ledger-mode list-unicode-display lua-mode
                            macrostep magit magit-todos marginalia
                            markdown-mode mmm-mode mode-line-bell
-                           move-dup multiple-cursors nim-mode
-                           nixpkgs-fmt ocaml-ts-mode orderless
-                           org-cliplink org-pomodoro origami
+                           modus-themes move-dup multiple-cursors
+                           nim-mode nixpkgs-fmt ocaml-ts-mode
+                           orderless org-cliplink org-pomodoro origami
                            package-lint-flymake page-break-lines
                            php-mode pip-requirements prettier-js
                            projectile projectile-rails proof-general

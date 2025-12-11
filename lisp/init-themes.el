@@ -5,13 +5,14 @@
 (setq-default solarized-high-contrast-mode-line t
               solarized-scale-org-headlines nil
               solarized-use-less-bold t)
+(require-package 'modus-themes)
 
 ;; Don't prompt to confirm theme safety. This avoids problems with
 ;; first-time startup on Emacs > 26.3.
 (setq custom-safe-themes t)
 
 ;; If you don't customize it, this is the theme you get.
-(setq-default custom-enabled-themes '(solarized-light))
+(setq-default custom-enabled-themes '(modus-vivendi))
 
 ;; Ensure that themes will be applied even if they have not been customized
 (defun reapply-themes ()
@@ -30,13 +31,13 @@
 (defun light ()
   "Activate a light color theme."
   (interactive)
-  (setq custom-enabled-themes '(solarized-light))
+  (setq custom-enabled-themes '(modus-operandi))
   (reapply-themes))
 
 (defun dark ()
   "Activate a dark color theme."
   (interactive)
-  (setq custom-enabled-themes '(solarized-dark))
+  (setq custom-enabled-themes '(modus-vivendi))
   (reapply-themes))
 
 
