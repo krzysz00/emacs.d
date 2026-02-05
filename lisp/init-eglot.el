@@ -5,9 +5,15 @@
 ;;; Code:
 
 (when (maybe-require-package 'eglot)
-  (maybe-require-package 'consult-eglot))
+  (maybe-require-package 'consult-eglot)
 
+  (require 'eglot)
 
+  (add-to-list 'eglot-server-programs
+               '((c++-mode c-mode) "clangd"))
+
+  (add-hook 'c-mode 'eglot-ensure)
+  (add-hook 'c++-mode 'eglot-ensure))
 
 (provide 'init-eglot)
 ;;; init-eglot.el ends here

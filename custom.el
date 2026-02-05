@@ -3,7 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(LaTeX-mode-hook '(LaTeX-preview-setup LaTeX-math-mode turn-on-reftex) t)
+ '(LaTeX-mode-hook '(LaTeX-preview-setup LaTeX-math-mode turn-on-reftex))
  '(TeX-PDF-mode t)
  '(TeX-auto-save t)
  '(TeX-engine 'xetex)
@@ -34,8 +34,8 @@
      "~/Dropbox/todo/tickler.org"))
  '(org-default-notes-file "~/Dropbox/todo/notes.org")
  '(org-directory "~/Dropbox/todo/")
- '(org-hide-emphasis-markers nil t)
- '(org-log-done nil t)
+ '(org-hide-emphasis-markers nil)
+ '(org-log-done nil)
  '(package-selected-packages
    '(add-node-modules-path ag aggressive-indent alert android-mode anzu
                            auctex auto-compile avy browse-kill-ring
@@ -73,7 +73,7 @@
                            projectile projectile-rails proof-general
                            psci purescript-mode racket-mode
                            rainbow-delimiters rainbow-mode reformatter
-                           reftex regex-tool restclient robe
+                           reftex regex-tool restclient rg robe
                            rspec-mode ruby-compilation
                            ruby-hash-syntax ruff-format rust-mode
                            sass-mode scratch seq session shfmt slime
@@ -92,6 +92,7 @@
  '(scss-compile-at-save nil t)
  '(sentence-end-double-space nil)
  '(session-use-package t nil (session))
+ '(sh-basic-offset 2)
  '(show-paren-mode t)
  '(tab-width 4)
  '(tool-bar-mode nil)
