@@ -102,6 +102,8 @@
 
 (add-hook 'c++-mode-hook (lambda () (c-set-offset 'innamespace [0])))
 
+(require 'init-llvm)
+
 ;; 256-color eterm
 (when (maybe-require-package 'eterm-256color)
   (require 'eterm-256color)
