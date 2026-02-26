@@ -5,10 +5,10 @@
 (defconst llvm-base-dir (expand-file-name "~/llvm/main/")
   "Base directory for LLVM source and build tree.")
 
-(defconst llvm-emacs-dir (concat llvm-base-dir "/src/llvm/utils/emacs")
+(defconst llvm-emacs-dir (concat llvm-base-dir "/llvm-project/llvm/utils/emacs")
   "Directory containing LLVM Emacs modes.")
 
-(defconst mlir-emacs-dir (concat llvm-base-dir "/src/mlir/utils/emacs")
+(defconst mlir-emacs-dir (concat llvm-base-dir "/llvm-project/mlir/utils/emacs")
   "Directory containing MLIR Emacs modes.")
 
 (defconst tablegen-lsp-bin (concat llvm-base-dir "/build/bin/tblgen-lsp-server")
