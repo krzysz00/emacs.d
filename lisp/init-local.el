@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (require-package 'android-mode)
 (require-package 'fuel)
 (require-package 'racket-mode)
