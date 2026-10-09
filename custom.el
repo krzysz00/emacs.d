@@ -3,7 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(LaTeX-mode-hook '(LaTeX-preview-setup LaTeX-math-mode turn-on-reftex))
+ '(LaTeX-mode-hook '(LaTeX-preview-setup LaTeX-math-mode turn-on-reftex) t)
  '(TeX-PDF-mode t)
  '(TeX-auto-save t)
  '(TeX-engine 'xetex)
@@ -34,8 +34,8 @@
      "~/Dropbox/todo/tickler.org"))
  '(org-default-notes-file "~/Dropbox/todo/notes.org")
  '(org-directory "~/Dropbox/todo/")
- '(org-hide-emphasis-markers nil)
- '(org-log-done nil)
+ '(org-hide-emphasis-markers nil t)
+ '(org-log-done nil t)
  '(package-selected-packages
    '(add-node-modules-path ag aggressive-indent alert android-mode anzu
                            auctex auto-compile avy browse-kill-ring
