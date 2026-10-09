@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -37,61 +38,61 @@
  '(org-hide-emphasis-markers nil t)
  '(org-log-done nil t)
  '(package-selected-packages
-   '(add-node-modules-path ag aggressive-indent alert android-mode anzu
+   '(add-node-modules-path aggressive-indent alert android-mode anzu
                            auctex auto-compile avy browse-kill-ring
                            bug-reference-github cask-mode cider
                            cl-libify cljsbuild-mode clojure-ts-mode
-                           command-log-mode consult consult-eglot
-                           corfu corfu-terminal crontab-mode css-eldoc
-                           csv-mode default-text-scale dhall-mode
-                           diff-hl diminish dimmer diredfl
-                           disable-mouse docker docker-compose-mode
-                           dockerfile-mode dotenv-mode dune
+                           command-log-mode consult-eglot corfu
+                           crontab-mode css-eldoc csv-mode
+                           default-text-scale dhall-mode diff-hl
+                           diminish dimmer diredfl disable-mouse
+                           docker dockerfile-mode dotenv-mode dune
                            dune-format eat eglot elisp-slime-nav
                            elm-mode elm-test-runner embark
                            embark-consult envrc erlang eterm-256color
-                           flycheck-clojure flycheck-ledger
+                           expreg flycheck-clojure flycheck-ledger
                            flycheck-nim flycheck-relint flycheck-rust
                            flymake flymake-actionlint flymake-flycheck
                            flymake-ruff forge fuel gcmh git-gutter
                            git-link git-modes git-timemachine
                            github-clone github-review
-                           gnu-elpa-keyring-update gnuplot haml-mode
-                           haskell-mode highlight-escape-sequences
-                           highlight-quoted htmlize httprepl
-                           ibuffer-projectile ibuffer-vc
-                           immortal-scratch inf-ruby info-colors
-                           ipretty j-mode js-comint js2-mode json-mode
-                           ledger-mode list-unicode-display lua-mode
-                           macrostep magit magit-todos marginalia
-                           markdown-mode mmm-mode mode-line-bell
-                           modus-themes move-dup multiple-cursors
-                           nim-mode nixpkgs-fmt ocaml-ts-mode
-                           orderless org-cliplink org-pomodoro origami
+                           gnu-elpa-keyring-update gnuplot go-ts-mode
+                           haml-mode haskell-mode
+                           highlight-escape-sequences highlight-quoted
+                           htmlize httprepl ibuffer-projectile
+                           ibuffer-vc immortal-scratch inf-ruby
+                           info-colors ipretty j-mode js-comint
+                           js2-mode json-mode ledger-mode
+                           list-unicode-display lua-mode macrostep
+                           magit magit-todos marginalia markdown-mode
+                           mmm-mode mode-line-bell modus-themes
+                           move-dup multiple-cursors nim-mode
+                           nixpkgs-fmt ocaml-ts-mode orderless
+                           org-cliplink org-pomodoro origami
                            package-lint-flymake page-break-lines
                            php-mode pip-requirements prettier-js
                            projectile projectile-rails proof-general
-                           psci purescript-mode racket-mode
+                           psci pulsar purescript-mode racket-mode
                            rainbow-delimiters rainbow-mode reformatter
                            reftex regex-tool restclient rg robe
                            rspec-mode ruby-compilation
                            ruby-hash-syntax ruff-format rust-mode
-                           sass-mode scratch seq session shfmt slime
+                           sass-mode scratch seq shfmt slime
                            smarty-mode solarized-theme sqlformat
                            sudo-edit switch-window symbol-overlay
                            textile-mode toml-mode tuareg
                            typescript-mode uiua-ts-mode unfill uptimes
-                           vc-darcs vertico vlf wgrep wgrep-ag
-                           which-key whitespace-cleanup-mode
+                           vc-darcs vertico vlf wgrep which-key
+                           whitespace-cleanup-mode
                            whole-line-or-region windswap
                            writeroom-mode xref-js2 yagist yaml-mode
                            yard-mode yari zig-mode zig-ts-mode))
- '(python-shell-interpreter "python3")
+ '(python-shell-interpreter "python3" t)
  '(reftex-plug-into-AUCTeX t)
  '(safe-local-variable-values '((lsp-enable-file-watchers)))
  '(scss-compile-at-save nil t)
  '(sentence-end-double-space nil)
- '(session-use-package t nil (session))
+ '(session-use-package t)
  '(sh-basic-offset 2)
  '(show-paren-mode t)
  '(tab-width 4)
